@@ -1,0 +1,41 @@
+{
+  "experiences": [
+    {
+      "company": "Sky",
+      "role": "Associate Software Engineer",
+      "period": "Sept 2023 - Nov 2024",
+      "location": "London, UK",
+      "description": "Built and operated Python-based backend APIs and automation pipelines for distributed network systems.",
+      "highlights": [
+        "Developed RESTful APIs with OpenAPI, ensuring reliable integration across distributed systems",
+        "Reduced manual configuration time by ~40% through automation pipelines",
+        "Maintained 90%+ test coverage using TDD with Pytest",
+        "Created proof-of-concept tools adopted across engineering teams"
+      ]
+    },
+    {
+      "company": "Digital Futures",
+      "role": "Software Engineering Trainee",
+      "period": "Jan 2023 - Aug 2023",
+      "location": "London, UK",
+      "description": "Delivered production-ready full-stack web applications within Agile sprints.",
+      "highlights": [
+        "Led a small project team using GitHub for version control and code reviews",
+        "Built React interfaces consuming REST APIs with responsive layouts",
+        "Implemented unit tests with Jest ensuring code stability"
+      ]
+    },
+    {
+      "company": "Swansea University",
+      "role": "BSc Computer Science",
+      "period": "2019 - 2022",
+      "location": "Swansea, UK",
+      "description": "Graduated with honours. Dissertation project: Gurkha One mobile application.",
+      "highlights": [
+        "Built end-to-end mobile app with React Native, Express, and TypeScript",
+        "Designed relational data models with TypeORM and MySQL",
+        "Implemented REST APIs with JWT authentication"
+      ]
+    }
+  ]
+}

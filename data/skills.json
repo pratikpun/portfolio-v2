@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "name": "Languages",
+      "skills": ["Python", "TypeScript", "JavaScript", "Java", "SQL"]
+    },
+    {
+      "name": "Backend & APIs",
+      "skills": ["FastAPI", "Flask", "Express.js", "REST APIs", "OpenAPI"]
+    },
+    {
+      "name": "Frontend",
+      "skills": ["React", "React Native", "Next.js", "Tailwind CSS"]
+    },
+    {
+      "name": "Databases",
+      "skills": ["PostgreSQL", "MySQL", "MongoDB", "SQLAlchemy", "TypeORM"]
+    },
+    {
+      "name": "Testing & Quality",
+      "skills": ["Pytest", "Jest", "Robot Framework", "TDD"]
+    },
+    {
+      "name": "Tools & DevOps",
+      "skills": ["Git", "GitLab CI/CD", "Kibana", "Grafana", "Bash"]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "projects": [
+    {
+      "id": "project-one",
+      "title": "Project One",
+      "description": "A full-stack web application built with modern technologies.",
+      "longDescription": "This project demonstrates building a scalable web application using React, Node.js, and PostgreSQL. It features real-time updates, authentication, and a responsive design.",
+      "tags": ["React", "Node.js", "PostgreSQL"],
+      "links": {
+        "live": "https://project-one.com",
+        "github": "https://github.com/username/project-one"
+      },
+      "featured": true
+    },
+    {
+      "id": "project-two",
+      "title": "Project Two",
+      "description": "A CLI tool for automating development workflows.",
+      "longDescription": "A command-line tool built with Go that streamlines common development tasks including code generation, testing, and deployment.",
+      "tags": ["Go", "CLI", "DevOps"],
+      "links": {
+        "github": "https://github.com/username/project-two"
+      },
+      "featured": true
+    },
+    {
+      "id": "project-three",
+      "title": "Project Three",
+      "description": "An open-source component library for React applications.",
+      "longDescription": "A collection of accessible, customizable React components built with TypeScript and styled with Tailwind CSS.",
+      "tags": ["React", "TypeScript", "Tailwind CSS"],
+      "links": {
+        "live": "https://project-three.dev",
+        "github": "https://github.com/username/project-three"
+      },
+      "featured": true
+    },
+    {
+      "id": "project-four",
+      "title": "Project Four",
+      "description": "A mobile-first e-commerce platform.",
+      "longDescription": "An e-commerce solution with a focus on mobile experience, featuring fast checkout, real-time inventory, and seamless payments.",
+      "tags": ["Next.js", "TypeScript", "Stripe"],
+      "links": {
+        "live": "https://project-four.shop"
+      },
+      "featured": false
+    },
+    {
+      "id": "project-five",
+      "title": "Project Five",
+      "description": "A data visualization dashboard for analytics.",
+      "longDescription": "An interactive dashboard that visualizes complex data sets with charts, graphs, and real-time updates.",
+      "tags": ["React", "D3.js", "Python"],
+      "links": {
+        "github": "https://github.com/username/project-five"
+      },
+      "featured": false
+    }
+  ]
+}

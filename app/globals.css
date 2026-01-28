@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  :root {
+    /* Light mode - monochrome base */
+    --background: #ffffff;
+    --foreground: #171717;
+    --muted: #f5f5f5;
+    --muted-foreground: #737373;
+    --border: #e5e5e5;
+
+    /* Accent color - customize this for your personal brand */
+    --accent: #2563eb;
+    --accent-foreground: #ffffff;
+  }
+
+  .dark {
+    /* Dark mode - monochrome base */
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --muted: #171717;
+    --muted-foreground: #a3a3a3;
+    --border: #262626;
+
+    /* Accent color remains the same or adjust for dark mode */
+    --accent: #3b82f6;
+    --accent-foreground: #ffffff;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar for dark mode */
+  .dark ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    background: var(--muted);
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: var(--muted-foreground);
+    border-radius: 4px;
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: var(--foreground);
+  }
+}
+
+@layer utilities {
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gradient accent utilities */
+  .bg-gradient-accent {
+    @apply bg-gradient-to-r from-violet-500 to-blue-500;
+  }
+
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-violet-500 to-blue-500 bg-clip-text text-transparent;
+  }
+
+  .border-gradient-accent {
+    border-image: linear-gradient(to right, #8b5cf6, #3b82f6) 1;
+  }
+}

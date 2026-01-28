@@ -1,0 +1,13 @@
+{
+  "name": "Pratik Pun",
+  "title": "Software Engineer",
+  "bio": "Software Engineer building reliable backend services and APIs in Python. I enjoy working end-to-end on features, from API design to delivery, with a focus on clean code, testing, and collaboration.",
+  "location": "Reading, UK",
+  "email": "punpratik@gmail.com",
+  "social": {
+    "github": "https://github.com/pratikpun",
+    "linkedin": "https://www.linkedin.com/in/pratik-pun-605b101a2/",
+    "twitter": null
+  },
+  "resumeUrl": "/pratik_pun_resume.pdf"
+}
