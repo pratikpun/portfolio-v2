@@ -11,9 +11,10 @@ export default function Contact() {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
+    formData.append("form-name", "contact");
 
     try {
-      const response = await fetch("/__forms.html", {
+      const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
@@ -47,11 +48,9 @@ export default function Contact() {
         <form
           name="contact"
           method="POST"
-          data-netlify="true"
           onSubmit={handleSubmit}
           className="max-w-xl space-y-6"
         >
-          <input type="hidden" name="form-name" value="contact" />
           <div>
             <label
               htmlFor="name"

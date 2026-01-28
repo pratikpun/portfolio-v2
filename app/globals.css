@@ -28,7 +28,7 @@
     --muted-foreground: #a3a3a3;
     --border: #262626;
 
-    /* Accent color remains the same or adjust for dark mode */
+    /* Accent color for dark mode */
     --accent: #3b82f6;
     --accent-foreground: #ffffff;
   }
