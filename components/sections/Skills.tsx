@@ -14,8 +14,8 @@ export default function Skills() {
       </FadeIn>
       <div className="grid gap-8 md:grid-cols-2">
         {categories.map((category, index) => (
-          <FadeIn key={category.name} delay={0.1 * index}>
-            <div className="rounded-lg border border-border bg-background p-6">
+          <FadeIn key={category.name} delay={0.1 * index} className="h-full">
+            <div className="h-full rounded-lg border border-border bg-muted/50 p-6">
               <h3 className="text-lg font-semibold text-foreground mb-3">
                 {category.name}
               </h3>
