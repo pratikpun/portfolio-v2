@@ -32,7 +32,7 @@ async function ProjectsContent({ searchParams }: ProjectsPageProps) {
       <div key={activeTag || "all"} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.map((project, index) => (
           <FadeIn key={project.id} delay={0.05 * index} className="h-full">
-            <ProjectCard project={project} />
+            <ProjectCard project={project} showImage={false} />
           </FadeIn>
         ))}
       </div>

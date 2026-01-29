@@ -37,7 +37,7 @@ export default function Projects() {
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.slice(0, 3).map((project, index) => (
           <FadeIn key={project.id} delay={0.1 * index} className="h-full">
-            <ProjectCard project={project} />
+            <ProjectCard project={project} showImage={false} />
           </FadeIn>
         ))}
       </div>

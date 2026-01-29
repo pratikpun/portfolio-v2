@@ -81,25 +81,49 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </FadeIn>
 
-        {project.image && (
+        {(project.images || project.image) && (
           <FadeIn delay={0.2}>
-            <div className="aspect-video bg-muted relative overflow-hidden rounded-lg mb-8">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+            {project.images && project.images.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {project.images.map((img, index) => (
+                  <div
+                    key={index}
+                    className="bg-muted relative overflow-hidden rounded-lg flex items-center justify-center p-4"
+                    style={{ minHeight: '250px' }}
+                  >
+                    <Image
+                      src={img}
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      width={600}
+                      height={450}
+                      className="object-contain max-h-[400px] w-auto h-auto"
+                      priority={index === 0}
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : project.image ? (
+              <div className="bg-muted relative overflow-hidden rounded-lg mb-8 flex items-center justify-center" style={{ minHeight: '300px', maxHeight: '600px' }}>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={800}
+                  height={600}
+                  className="object-contain max-h-[600px] w-auto h-auto"
+                  priority
+                />
+              </div>
+            ) : null}
           </FadeIn>
         )}
 
         <FadeIn delay={0.25}>
-          <div className="prose prose-neutral dark:prose-invert max-w-none mb-8">
-            <p className="text-lg text-muted-foreground">
-              {project.longDescription || project.description}
-            </p>
+          <div className="prose prose-neutral dark:prose-invert max-w-none mb-8 space-y-4">
+            {(project.longDescription || project.description).split('\n\n').map((paragraph, index) => (
+              <p key={index} className="text-lg text-muted-foreground">
+                {paragraph}
+              </p>
+            ))}
           </div>
         </FadeIn>
 

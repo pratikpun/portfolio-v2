@@ -5,22 +5,14 @@ import type { Project } from "@/lib/types";
 
 interface ProjectCardProps {
   project: Project;
+  showImage?: boolean;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, showImage = true }: ProjectCardProps) {
   return (
     <Link href={`/projects/${project.id}`} className="block h-full">
       <article className="group h-full flex flex-col rounded-lg border border-border bg-background overflow-hidden transition-colors hover:border-violet-500">
-        {project.image && (
-          <div className="aspect-video bg-muted relative overflow-hidden flex-shrink-0">
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="object-cover transition-transform group-hover:scale-105"
-            />
-          </div>
-        )}
+        
         <div className="p-5 flex flex-col flex-grow">
           <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-gradient-accent transition-colors">
             {project.title}
@@ -34,6 +26,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             ))}
           </div>
         </div>
+        {showImage && (project.images?.[0] || project.image) && (
+          <div className="aspect-video bg-muted relative overflow-hidden flex-shrink-0">
+            <Image
+              src={project.images?.[0] || project.image!}
+              alt={project.title}
+              fill
+              className="object-contain transition-transform group-hover:scale-105"
+            />
+          </div>
+        )}
       </article>
     </Link>
   );
