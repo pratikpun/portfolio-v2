@@ -11,16 +11,24 @@ export default function Contact() {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
-    formData.append("form-name", "contact");
+
+    const data = {
+      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (result.success) {
         setStatus("success");
         form.reset();
       } else {
